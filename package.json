@@ -1,0 +1,26 @@
+{
+  "name": "react-js-plugins",
+  "version": "1.0.0",
+  "description": "all custom hooks and plugins.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivajisurwase/react-js-plugins.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Shivaji Surwase",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/shivajisurwase/react-js-plugins/issues"
+  },
+  "homepage": "https://github.com/shivajisurwase/react-js-plugins#readme",
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
+}
