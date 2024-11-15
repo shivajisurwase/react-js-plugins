@@ -72,7 +72,7 @@ export const _thousandSeparator = (num: number) => {
   };
 };
 
-const _getFinancialYear = () => {
+export const _getFinancialYear = () => {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   const month = currentDate.getMonth();
@@ -180,14 +180,14 @@ export const _batchProcess = async <T>(data: T[], batchSize: number, processFn: 
 
 
 
-export const flattenObject = (obj: any, prefix: string = ''): FlattenedObject => {
+export const _flattenObject = (obj: any, prefix: string = ''): FlattenedObject => {
   let result: FlattenedObject = {};
 
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
       const newKey = prefix ? `${prefix}.${key}` : key;
       if (typeof obj[key] === 'object' && obj[key] !== null) {
-        result = { ...result, ...flattenObject(obj[key], newKey) };
+        result = { ...result, ..._flattenObject(obj[key], newKey) };
       } else {
         result[newKey] = obj[key];
       }
